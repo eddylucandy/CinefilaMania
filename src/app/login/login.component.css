@@ -1,6 +1,37 @@
 
+body {
+  margin: 0; /* Quita los márgenes */
+  height: 100vh; /* Asegura que el cuerpo ocupe toda la ventana */
+}
+
+body ::before {
+  content: ""; /* Genera un pseudo-elemento vacío */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/pexels-tima-miroshnichenko-7991318.jpg'); /* Establece la imagen como fondo */
+  background-size: cover; /* Cubre toda el área disponible */
+  background-position: center; /* Centra la imagen */
+  filter: blur(8px); /* Desenfoque de 8 píxeles */
+  z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+}
+
+.logo{
+  background-image: url('../img/logo.jpg');
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  border: solid 5px;
+}
+
+
 .login{
   width: 100%;
-  border-radius: 100%;
-  background-color: black;
+  border: solid 2px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.8); /* Color negro con 50% de transparencia */
+  height: 800px;
+  width: 800px;
 }

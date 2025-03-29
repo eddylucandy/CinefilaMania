@@ -18,20 +18,107 @@ body ::before {
   z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
 }
 
+.loginArea{
+  display: flex; /* Habilita Flexbox para centrar contenido interno */
+  justify-content: center; /* Centra horizontalmente el contenido interno */
+  align-items: center; /* Centra verticalmente el contenido interno */
+  padding: 200px;
+}
+
 .logo{
-  background-image: url('../img/logo.jpg');
   height: 100px;
   width: 100px;
   border-radius: 50px;
-  border: solid 5px;
+  border: white solid 5px;
+  display: flex; /* Habilita el uso de Flexbox */
+  justify-content: center; /* Centra horizontalmente el contenido del logo */
+  align-items: center; /* Centra verticalmente el contenido del logo */
+  margin: 0 auto; /* Centra el logo horizontalmente en su contenedor */
+  background-color: white;
+  position: relative;
+  bottom: 55px;
+}
+
+.loginLogo{
+  height: 85px;
+  width: 85px;
+  border-radius: 20px;
+
+
+
 }
 
 
 .login{
-  width: 100%;
-  border: solid 2px;
+  border: solid white 1px;
   border-radius: 30px;
   background-color: rgba(0, 0, 0, 0.8); /* Color negro con 50% de transparencia */
   height: 800px;
   width: 800px;
+
 }
+
+h1{
+  font-size: 60px;
+  position: relative;
+  bottom: 55px;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 250px;
+}
+
+
+
+input {
+  width: 300px; /* Ancho del input */
+  height: 40px; /* Altura del input */
+  padding: 5px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño del texto */
+  border: none; /* Elimina todos los bordes */
+  border-bottom: 2px solid white; /* Agrega solo el borde inferior */
+  background-color: transparent; /* Fondo transparente */
+  color: white; /* Color del texto */
+  outline: none; /* Elimina el borde azul al hacer clic */
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5); /* Color del texto del placeholder con opacidad */
+}
+
+
+button {
+  width: 150px; /* Ancho del input */
+  height: 60px; /* Altura del input */
+  font-size: 20px; /* Tamaño de la fuente para el texto dentro del input */
+  border-radius: 19px;
+  margin-top: 1px;
+  margin-bottom: 50px;
+}
+
+p{
+  font-size: 20px;
+  color: white;
+}
+
+span{
+  font-weight: bold;
+}
+
+.recordar-input {
+  position: relative;
+  left: 80px;
+}
+
+.recordar-text{
+  position: relative;
+  left: 45px;
+  bottom: 53px;
+}
+

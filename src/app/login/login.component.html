@@ -11,16 +11,32 @@
     <center>
     <div class="login">
       <div class="logo">
-       <!-- <img src="../img/logo.jpg"> -->
+        <img class="loginLogo" src="../img/logo.jpg">
       </div>
+
       <h1 style="color: white;">Login</h1>
+
       <form class="form">
-        <label for="email" style="color: white;">Email:</label><br>
-        <input type="text" id="email" name="email" placeholder="ejemplo@hotmail.com"><br>
-        <label for="pass" style="color: white;">Password:</label><br>
-        <input type="text" id="pass" name="pass" placeholder="xxxxxxxx"><br>
+        <input type="text" id="email" name="email" placeholder="Email">
+        <i class="fa-regular fa-envelope"></i>
+
+        <input type="password" id="pass" name="pass" placeholder="Pasword">
+        <i class="fa-solid fa-lock"></i>
+
+        <div class="recordar-container">
+          <div class="recordar-input">
+            <input type="checkbox">
+          </div>
+
+          <div class="recordar-text">
+            <p>Remember me</p>
+          </div>
+        </div>
         <button>Login</button>
       </form>
+
+      <p id="recuperacion"><u>Forgot Password?</u></p>
+      <p>Don't have a account? <span id="registro">Register</span></p>
     </div>
     </center>
   </div>

@@ -85,7 +85,6 @@ input {
   color: white; /* Color del texto */
   outline: none; /* Elimina el borde azul al hacer clic */
   margin-top: 10px;
-  margin-bottom: 0px;
 }
 
 input::placeholder {
@@ -113,12 +112,12 @@ span{
 
 .recordar-input {
   position: relative;
-  left: 80px;
+  left: 60px;
 }
 
 .recordar-text{
   position: relative;
-  left: 45px;
+  left: 30px;
   bottom: 53px;
 }
 

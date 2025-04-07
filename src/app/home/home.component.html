@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+</head>
+<body>
+  <div class="w-full">
+
+    <!-- Novedades -->
+    <div class="relative h-96 bg-cover bg-center" [ngStyle]="{'background-image': 'url(' + novedades[0].image + ')'}">
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center px-10 text-white">
+        <h1 class="text-4xl font-bold">{{ novedades[0].title }}</h1>
+        <p class="max-w-md mt-4">{{ novedades[0].description }}</p>
+        <button class="bg-white text-black px-4 py-2 mt-4 rounded">Entrar</button>
+      </div>
+    </div>
+
+    <!-- Reviews recientes -->
+    <div class="text-center my-10">
+      <h2 class="text-2xl font-bold">Reviews Recientes</h2>
+      <div class="flex justify-center gap-6 mt-6 flex-wrap">
+        <div *ngFor="let review of reviews" class="w-64">
+          <img [src]="review.image" class="rounded-lg w-full h-40 object-cover">
+          <h3 class="font-semibold mt-2">{{ review.subtitle }}</h3>
+          <p class="text-sm text-gray-600">{{ review.text }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lista Top Películas -->
+    <div class="flex flex-col lg:flex-row items-center bg-black text-white p-8">
+      <div class="flex-1 space-y-4">
+        <h2 class="text-2xl font-bold">Lista Top Películas</h2>
+        <div *ngFor="let item of topPeliculas.entries">
+          <h3 class="font-semibold">{{ item.subtitle }}</h3>
+          <p class="text-sm">{{ item.text }}</p>
+        </div>
+        <button class="bg-white text-black px-4 py-2 rounded mt-4">Secondary button</button>
+      </div>
+      <img [src]="topPeliculas.image" class="rounded-xl mt-6 lg:mt-0 lg:ml-8 w-80">
+    </div>
+
+    <!-- Lista Top Series -->
+    <div class="flex flex-col lg:flex-row-reverse items-center p-8">
+      <div class="flex-1 space-y-4">
+        <h2 class="text-2xl font-bold">Lista Top Series</h2>
+        <div *ngFor="let item of topSeries.entries">
+          <h3 class="font-semibold">{{ item.subtitle }}</h3>
+          <p class="text-sm">{{ item.text }}</p>
+        </div>
+      </div>
+      <img [src]="topSeries.image" class="rounded-xl mt-6 lg:mt-0 lg:mr-8 w-80">
+    </div>
+
+  </div>
+
+</body>
+</html>

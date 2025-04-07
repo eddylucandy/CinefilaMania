@@ -109,31 +109,23 @@ p{
 
 
 .entrada{
-  background-color: blueviolet;
+
   display: flex;
   flex-grow: 1;
 }
 
 .text{
-  background-color: aqua;
+
   flex-grow: 20;
 }
 
 
 .terms{
-  background-color: brown;
+
   width: 570px;
   flex-grow: 3;
 }
 
-
-/*
-.box{
-  background-color: aqua;
-  display: flex;
-  flex-grow: 2;
-}
-*/
 
 
 span{

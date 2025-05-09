@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="home.component.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="home-container">
+    <!-- Novedades del Año Section -->
+    <section class="news-section">
+      <h1>Novedades del Año</h1>
+      <div class="carousel">
+        <div class="carousel-item" *ngFor="let item of newsItems">
+          <img [src]="item.image" [alt]="item.title" />
+          <p>{{ item.description }}</p>
+          <button>Entrar</button>
+        </div>
+      </div>
+      <div class="carousel-dots">
+        <span *ngFor="let dot of newsItems" class="dot"></span>
+      </div>
+    </section>
+
+    <!-- Reviews Recientes Section -->
+    <section class="reviews-section">
+      <h2>Reviews Recientes</h2>
+      <div class="reviews-grid">
+        <div class="review-card" *ngFor="let review of reviews">
+          <img [src]="review.image" [alt]="review.title" />
+          <h3>{{ review.title }}</h3>
+          <p>{{ review.description }}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lista Top Películas Section -->
+    <section class="top-movies-section">
+      <h2>Lista Top Películas</h2>
+      <div class="top-movies-content">
+        <div class="text-content">
+          <h3>Subheading</h3>
+          <p>Body text for whatever you’d like to expand on the main point.</p>
+          <button>Button</button>
+          <h3>Subheading</h3>
+          <p>Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes.</p>
+          <h3>Subheading</h3>
+          <p>Body text for whatever you’d like to add more explanations, more details, and context.</p>
+          <button class="secondary-button">Secondary Button</button>
+        </div>
+        <div class="image-content">
+          <img src="assets/top-movies.jpg" alt="Top Movies" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Lista Top Series Section -->
+    <section class="top-series-section">
+      <h2>Lista Top Series</h2>
+      <div class="top-series-content">
+        <div class="text-content">
+          <h3>Subheading</h3>
+          <p>Body text for whatever you’d like to expand on the main point.</p>
+          <button>Button</button>
+          <h3>Subheading</h3>
+          <p>Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes.</p>
+          <h3>Subheading</h3>
+          <p>Body text for whatever you’d like to add more explanations, more details, and context.</p>
+        </div>
+        <div class="image-content">
+          <img src="assets/top-series.jpg" alt="Top Series" />
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

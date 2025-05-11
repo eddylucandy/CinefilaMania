@@ -17,6 +17,36 @@
 }
 
 .carousel {
+  text-align: center;
+}
+
+.carousel img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.carousel-controls {
+  margin-top: 10px;
+}
+
+.carousel-controls button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carousel-controls button:hover {
+  background-color: #0056b3;
+}
+
+
+/*
+.carousel {
   display: flex;
   overflow-x: auto;
   gap: 20px;
@@ -50,7 +80,7 @@
 .carousel-dots {
   margin-top: 10px;
 }
-
+*/
 .dot {
   display: inline-block;
   width: 10px;

@@ -16,17 +16,63 @@
   margin-bottom: 20px;
 }
 
-.carousel {
-  text-align: center;
+.carousel-item {
+  position: relative;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 50vh; /* Opcional: Ocupa toda la altura de la pantalla */
+  overflow: hidden; /* Evita desbordamientos */
 }
 
+/*.carousel {
+  text-align: center;
+}*/
+
 .carousel img {
-  width: 80%;
-  max-width: 600px;
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: 100%; /* Opcional: Se adapta a la altura */
+  object-fit: cover; /* Asegura que la imagen cubra todo el área sin deformarse */
+}
+
+.carousel h1{
+  position: absolute;
+  top: 30%; /* Ajusta la posición vertical */
+  right: 59%;
+ /* transform: translate(-50%, -50%); /* Centra el texto */
+  color: white; /* Ajusta el color del texto */
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-size: 48px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 10px 20px;
+}
+
+.carousel p{
+  position: absolute;
+  top: 50%; /* Ajusta la posición vertical */
+  right: 50%;
+  /*transform: translate(-50%, -50%); /* Centra el texto */
+  color: white; /* Ajusta el color del texto */
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-size: 24px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 10px 20px;
   border-radius: 10px;
 }
 
+.carousel button {
+  position: absolute;
+  top: 78%; /* Ajusta la posición vertical */
+  right: 70%;
+  transform: translate(-50%, -50%); /* Centra el texto
+  /*color: white; /* Ajusta el color del texto */
+  /*text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-size: 24px;
+  font-weight: bold; */
+}
+
 .carousel-controls {
+
   margin-top: 10px;
 }
 

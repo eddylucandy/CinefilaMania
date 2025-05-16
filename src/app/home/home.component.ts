@@ -16,9 +16,9 @@ export class HomeComponent implements OnInit {
   ];
 
   reviews = [
-    { title: 'Subheading', description: 'Body text for whatever you’d like to add more to the subheading.', image: 'https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg' },
-    { title: 'Subheading', description: 'Body text for whatever you’d like to expand on the main point.', image: 'https://preview.redd.it/xe2175thl6u81.jpg?auto=webp&s=5842f2df12adb095e635f43e809d2f38093e7a13' },
-    { title: 'Subheading', description: 'Body text for whatever you’d like to share more.', image: 'https://cloudfront-us-east-1.images.arcpublishing.com/infobae/2NJO3FE7QBHQJD5GKNCI6XIODM.jpg' }
+    { title: 'Subheading', Valuation: 'buena', description: 'Body text for whatever you’d like to add more to the subheading.', image: 'https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg' },
+    { title: 'Subheading', Valuation: 'mala', description: 'Body text for whatever you’d like to expand on the main point.', image: 'https://preview.redd.it/xe2175thl6u81.jpg?auto=webp&s=5842f2df12adb095e635f43e809d2f38093e7a13' },
+    { title: 'Subheading', Valuation: 'mediana', description: 'Body text for whatever you’d like to share more.', image: 'https://cloudfront-us-east-1.images.arcpublishing.com/infobae/2NJO3FE7QBHQJD5GKNCI6XIODM.jpg' }
   ];
 
   currentNewsIndex = 0;

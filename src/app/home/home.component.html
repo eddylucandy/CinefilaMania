@@ -27,7 +27,7 @@
        <div class="review-card" *ngFor="let review of reviews">
          <img [src]="review.image" [alt]="review.title" />
          <h3>{{ review.title }}</h3>
-         <p>{{ review.description }}</p>
+         <details><summary>{{review.Valuation}}</summary><p>{{ review.description }}</p></details>
        </div>
      </div>
    </section>

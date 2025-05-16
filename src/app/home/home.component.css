@@ -5,16 +5,18 @@
   padding: 20px;
 }
 
-/* Novedades del Año Section */
+/* Novedades Section */
 .news-section {
   text-align: center;
   margin-bottom: 40px;
 }
 
+/*
 .news-section h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
+
+ font-size: 2.5em;
+ margin-bottom: 20px;
+}*/
 
 .carousel-item {
   position: relative;
@@ -34,10 +36,14 @@
 }
 
 .carousel h1{
+
   position: absolute;
-  top: 30%; /* Ajusta la posición vertical */
-  right: 59%;
+  top: 30%;  /*Ajusta la posición vertical
+  right: 59%;*/
  /* transform: translate(-50%, -50%); /* Centra el texto */
+
+  float: right;
+
   color: white; /* Ajusta el color del texto */
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
   font-size: 48px;
@@ -49,8 +55,11 @@
 .carousel p{
   position: absolute;
   top: 50%; /* Ajusta la posición vertical */
-  right: 50%;
+  /* right: 50%;
   /*transform: translate(-50%, -50%); /* Centra el texto */
+
+  float: right;
+
   color: white; /* Ajusta el color del texto */
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
   font-size: 24px;
@@ -126,7 +135,7 @@
 .carousel-dots {
   margin-top: 10px;
 }
-*/
+*//*
 .dot {
   display: inline-block;
   width: 10px;
@@ -134,7 +143,7 @@
   background-color: #ccc;
   border-radius: 50%;
   margin: 0 5px;
-}
+}*/
 
 /* Reviews Recientes Section */
 .reviews-section {
@@ -160,7 +169,9 @@
 
 .review-card img {
   width: 100%;
-  height: auto;
+  /*height: auto;*/
+  height: 200px; /* fija la altura deseada */
+  object-fit: cover; /* recorta la imagen sin deformarla */
   border-radius: 10px;
 }
 

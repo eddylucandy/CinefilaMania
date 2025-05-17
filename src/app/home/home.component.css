@@ -1,0 +1,269 @@
+.home-container {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Novedades Section */
+.news-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/*
+.news-section h1 {
+
+ font-size: 2.5em;
+ margin-bottom: 20px;
+}*/
+
+.carousel-item {
+  position: relative;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 50vh; /* Opcional: Ocupa toda la altura de la pantalla */
+  overflow: hidden; /* Evita desbordamientos */
+}
+
+/*.carousel {
+  text-align: center;
+}*/
+
+.carousel img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: 100%; /* Opcional: Se adapta a la altura */
+  object-fit: cover; /* Asegura que la imagen cubra todo el área sin deformarse */
+}
+
+.carousel h1{
+
+  position: absolute;
+  top: 30%;  /*Ajusta la posición vertical
+  right: 59%;*/
+ /* transform: translate(-50%, -50%); /* Centra el texto */
+
+  float: right;
+
+  color: white; /* Ajusta el color del texto */
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-size: 48px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 10px 20px;
+}
+
+.carousel p{
+  position: absolute;
+  top: 50%; /* Ajusta la posición vertical */
+  /* right: 50%;
+  /*transform: translate(-50%, -50%); /* Centra el texto */
+
+  float: right;
+
+  color: white; /* Ajusta el color del texto */
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-size: 24px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.carousel button {
+  position: absolute;
+  top: 78%; /* Ajusta la posición vertical */
+  right: 70%;
+  transform: translate(-50%, -50%); /* Centra el texto
+  /*color: white; /* Ajusta el color del texto */
+  /*text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  font-size: 24px;
+  font-weight: bold; */
+}
+
+.carousel-controls {
+
+  margin-top: 10px;
+}
+
+.carousel-controls button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carousel-controls button:hover {
+  background-color: #0056b3;
+}
+
+
+/*
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+}
+
+.carousel-item {
+  min-width: 300px;
+  text-align: left;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.carousel-item p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.carousel-item button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carousel-dots {
+  margin-top: 10px;
+}
+*//*
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+}*/
+
+/* Reviews Recientes Section */
+.reviews-section {
+  margin-bottom: 40px;
+}
+
+.reviews-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.reviews-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.review-card {
+  width: 30%;
+  text-align: center;
+}
+
+.review-card img {
+  width: 100%;
+  /*height: auto;*/
+  height: 200px; /* fija la altura deseada */
+  object-fit: cover; /* recorta la imagen sin deformarla */
+  border-radius: 10px;
+}
+
+.review-card h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.review-card p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Lista Top Películas Section */
+.top-movies-section {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.top-movies-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.top-movies-content {
+  display: flex;
+  gap: 20px;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.text-content h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.text-content p {
+  font-size: 0.9em;
+  margin-bottom: 20px;
+}
+
+.text-content button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.secondary-button {
+  background-color: #555 !important;
+}
+
+.image-content {
+  flex: 1;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Lista Top Series Section */
+.top-series-section {
+  margin-bottom: 40px;
+}
+
+.top-series-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.top-series-content {
+  display: flex;
+  gap: 20px;
+}
+
+.top-series-content .text-content,
+.top-series-content .image-content {
+  flex: 1;
+}
+
+.top-series-content .image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}

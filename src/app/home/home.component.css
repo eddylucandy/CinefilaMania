@@ -202,45 +202,74 @@
 .top-movies-content {
   display: flex;
   gap: 20px;
+  align-items: stretch; /* asegura que ambas columnas tengan misma altura */
 }
 
 .text-content {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.text-content h3 {
-  font-size: 1.2em;
-  margin: 10px 0;
-}
-
-.text-content p {
-  font-size: 0.9em;
+.movie-item {
   margin-bottom: 20px;
 }
 
-.text-content button {
-  padding: 10px 20px;
+.title-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-button h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.title-button button {
+  padding: 8px 16px;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .secondary-button {
   background-color: #555 !important;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
+/* Imagen ocupa toda la altura del contenedor */
 .image-content {
   flex: 1;
+  display: flex;
+  align-items: stretch;
 }
 
 .image-content img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
 }
+
 
 /* Lista Top Series Section */
 .top-series-section {
@@ -255,15 +284,70 @@
 .top-series-content {
   display: flex;
   gap: 20px;
+  align-items: stretch; /* iguala altura entre texto e imagen */
 }
 
-.top-series-content .text-content,
+.top-series-content .text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.series-item {
+  margin-bottom: 20px;
+}
+
+.title-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-button h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.title-button button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.text-content p {
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.secondary-button {
+  background-color: #555 !important;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Imagen ocupa toda la altura */
 .top-series-content .image-content {
   flex: 1;
+  display: flex;
+  align-items: stretch;
 }
 
 .top-series-content .image-content img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
 }

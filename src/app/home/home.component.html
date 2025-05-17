@@ -17,7 +17,7 @@
        <button (click)="nextNews()">Siguiente ⟶</button>
      </div>
    </section>
-
+   <br>
    <br>
 
    <!-- Reviews Recientes Section -->
@@ -32,41 +32,84 @@
      </div>
    </section>
    <br>
+   <br>
 
    <!-- Lista Top Películas Section -->
    <section class="top-movies-section">
-     <h2>Lista Top Películas</h2>
+     <h2>Top Películas</h2>
      <div class="top-movies-content">
        <div class="text-content">
-         <h3>Subheading</h3>
-         <p>Body text for whatever you’d like to expand on the main point.</p>
-         <button>Button</button>
-         <h3>Subheading</h3>
-         <p>Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes.</p>
-         <h3>Subheading</h3>
-         <p>Body text for whatever you’d like to add more explanations, more details, and context.</p>
-         <button class="secondary-button">Secondary Button</button>
+         <div class="movie-item">
+           <div class="title-button">
+             <h3>1st- {{ topPeliculas[0].title }}</h3>
+             <button>Ver</button>
+           </div>
+           <p>{{ topPeliculas[0].description }}</p>
+         </div>
+
+         <div class="movie-item">
+           <div class="title-button">
+             <h3>2nd- {{ topPeliculas[1].title }}</h3>
+             <button>Ver</button>
+           </div>
+           <p>{{ topPeliculas[1].description }}</p>
+         </div>
+
+         <div class="movie-item">
+           <div class="title-button">
+             <h3>3rd- {{ topPeliculas[2].title }}</h3>
+             <button>Ver</button>
+           </div>
+           <p>{{ topPeliculas[2].description }}</p>
+         </div>
+
+         <div class="button-wrapper">
+           <button class="secondary-button">Ver Lista Completa</button>
+         </div>
        </div>
+
        <div class="image-content">
          <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/09/star-trek-oscuridad.jpg?tf=3840x" alt="Top Movies" />
        </div>
      </div>
    </section>
    <br>
+   <br>
 
    <!-- Lista Top Series Section -->
    <section class="top-series-section">
-     <h2>Lista Top Series</h2>
+     <h2>Top Series</h2>
      <div class="top-series-content">
        <div class="text-content">
-         <h3>Subheading</h3>
-         <p>Body text for whatever you’d like to expand on the main point.</p>
-         <button>Button</button>
-         <h3>Subheading</h3>
-         <p>Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes.</p>
-         <h3>Subheading</h3>
-         <p>Body text for whatever you’d like to add more explanations, more details, and context.</p>
+         <div class="series-item">
+           <div class="title-button">
+             <h3>1st- {{ topSeries[0].title }}</h3>
+             <button>Ver</button>
+           </div>
+           <p>{{ topSeries[0].description }}</p>
+         </div>
+
+         <div class="series-item">
+           <div class="title-button">
+             <h3>2nd- {{ topSeries[1].title }}</h3>
+             <button>Ver</button>
+           </div>
+           <p>{{ topSeries[1].description }}</p>
+         </div>
+
+         <div class="series-item">
+           <div class="title-button">
+             <h3>3rd- {{ topSeries[2].title }}</h3>
+             <button>Ver</button>
+           </div>
+           <p>{{ topSeries[2].description }}</p>
+         </div>
+
+         <div class="button-wrapper">
+           <button class="secondary-button">Ver Lista Completa</button>
+         </div>
        </div>
+
        <div class="image-content">
          <img src="https://andro4all.com/hero/2023/10/1299427.png?width=1200" alt="Top Series" />
        </div>

@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import {CommonModule} from '@angular/common';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-footer',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.css']
 })
-export class LoginComponent {
+export class FooterComponent {
 
 }

@@ -1,3 +1,11 @@
+.RegistrationArea{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* opcional: altura completa de la ventana */
+  text-align: center;
+}
+
 
 body {
   margin: 0; /* Quita los márgenes */

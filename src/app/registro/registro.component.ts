@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-registro',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './registro.component.html',
-  styleUrl: './registro.component.css'
+  styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent {
 

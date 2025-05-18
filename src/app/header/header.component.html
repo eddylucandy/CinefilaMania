@@ -1,19 +1,16 @@
 <!-- app/header/header.component.html -->
 <header class="site-header">
   <div class="logo-container">
-    <img src="placeholder-logo.png" alt="Logoipsum" class="logo">
+    <img src="img/logo.jpg" alt="Logo" class="logo">
   </div>
   <div class="divider"></div>
   <nav class="main-nav">
-    <button class="nav-button">
+    <button class="nav-button" (click)="goToLogin()">
       <i class="fas fa-user"></i>
       <span>Login/Registro</span>
     </button>
-    <button class="nav-button">
-      <span>Películas</span>
-    </button>
-    <button class="nav-button">
-      <span>Series</span>
+    <button class="nav-button" (click)="goToHome()">
+      <span>Home</span>
     </button>
     <button class="nav-button">
       <i class="fas fa-search"></i>

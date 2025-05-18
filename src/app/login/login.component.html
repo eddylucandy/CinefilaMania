@@ -1,32 +1,35 @@
 <!-- Login Page Content -->
 <div class="loginArea">
-    <div class="login">
-      <div class="logo">
-        <img class="loginLogo" src="../img/logo.jpg">
+  <img class="background-image" src="/img/background.jpg" alt="Fondo">
+
+  <div class="login">
+    <div class="logo">
+      <img class="loginLogo" src="/img/logo.jpg" alt="Logo">
+    </div>
+
+    <h1 style="color: white;">Login</h1>
+
+    <form class="form">
+      <i class="fa-regular fa-envelope"></i>
+      <input type="email" id="email" name="email" placeholder="Email" #email>
+
+      <i class="fa-solid fa-lock"></i>
+      <input type="password" id="pass" name="pass" placeholder="Password" #password>
+
+      <div class="recordar-container">
+        <div class="recordar-input">
+          <input type="checkbox">
+        </div>
+        <div class="recordar-text">
+          <p>Remember me</p>
+        </div>
       </div>
 
-      <h1 style="color: white;">Login</h1>
+      <button (click)="login(email.value, password.value)">Login</button>
+    </form>
 
-      <form class="form">
-        <i class="fa-regular fa-envelope"></i>
-        <input type="text" id="email" name="email" placeholder="Email">
-
-        <i class="fa-solid fa-lock"></i>
-        <input type="password" id="pass" name="pass" placeholder="Pasword">
-
-        <div class="recordar-container">
-          <div class="recordar-input">
-            <input type="checkbox">
-          </div>
-          <div class="recordar-text">
-            <p>Remember me</p>
-          </div>
-        </div>
-
-        <button>Login</button>
-      </form>
-
-      <p id="recuperacion"><u>Forgot Password?</u></p>
-      <p>Don't have a account? <span id="registro">Register</span></p>
-    </div>
+    <p id="recuperacion"><u>Forgot Password?</u></p>
+    <p>Don't have an account? <span id="registro" (click)="goToRegister()">Register</span></p>
   </div>
+</div>
+

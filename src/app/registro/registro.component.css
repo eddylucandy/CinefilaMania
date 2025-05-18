@@ -12,18 +12,15 @@ body {
   height: 100vh; /* Asegura que el cuerpo ocupe toda la ventana */
 }
 
-body ::before {
-  content: ""; /* Genera un pseudo-elemento vacío */
-  position: absolute;
+.background-image {
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('../img/pexels-tima-miroshnichenko-7991318.jpg'); /* Establece la imagen como fondo */
-  background-size: cover; /* Cubre toda el área disponible */
-  background-position: center; /* Centra la imagen */
-  filter: blur(8px); /* Desenfoque de 8 píxeles */
-  z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(8px);
 }
 
 .RegistrationArea{
@@ -72,8 +69,9 @@ h1{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
-  width: 250px;
+  align-items: center;/*
+  gap: 10px;
+  width: 250px;*/
 }
 
 
@@ -110,30 +108,27 @@ p{
   color: white;
 }
 
-.container{
+
+.aceptar.container {
   display: flex;
-
+  justify-content: center;
+  margin-top: 10px;
 }
 
-
-.entrada{
-
+.aceptar-label {
   display: flex;
-  flex-grow: 1;
+  align-items: center;
+  gap: 8px; /* Espacio entre checkbox y texto */
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
 }
 
-.text{
-
-  flex-grow: 20;
+.aceptar-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: white; /* Para asegurar color del check en navegadores compatibles */
 }
-
-
-.terms{
-
-  width: 570px;
-  flex-grow: 3;
-}
-
 
 
 span{

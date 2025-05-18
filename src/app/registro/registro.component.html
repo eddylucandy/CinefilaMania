@@ -1,8 +1,10 @@
 <!-- Registration Page Content -->
 <div class="RegistrationArea">
+  <img class="background-image" src="/img/background.jpg" alt="Fondo">
+
     <div class="Registration">
       <div class="logo">
-        <img class="RegistrationLogo" src="../img/logo.jpg">
+        <img class="RegistrationLogo" src="img/logo.jpg">
       </div>
 
       <h1 style="color: white;">Registration</h1>
@@ -20,19 +22,21 @@
         <i class="fa-solid fa-lock"></i>
         <input type="password" id="confirm" name="confirm" placeholder="Confirm Password">
 
+        <br>
+
         <div class="aceptar container">
-          <div class="aceptar entrada">
-            <input type="checkbox">
-          </div>
-          <div class="aceptar text">
-            <p class="terms"><u>I agree to the terms & conditions</u></p>
-          </div>
+          <label class="aceptar-label">
+            <input type="checkbox" />
+            <span class="terms"><u>I agree to the terms & conditions</u></span>
+          </label>
         </div>
+
+        <br>
 
         <button>Registration</button>
       </form>
 
-      <p>Already have an account? <span id="login">Login</span></p>
+      <p>Already have an account? <span id="login" (click)="goToLogin()">Login</span></p>
     </div>
 </div>
 

@@ -1,0 +1,43 @@
+/* src/app/app.component.css */
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.reviews {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.items {
+  display: flex;
+  gap: 10px;
+}
+
+.review-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.view-all {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

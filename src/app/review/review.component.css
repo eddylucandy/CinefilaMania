@@ -1,0 +1,128 @@
+/* movie-card.component.scss */
+
+.movie-card-container {
+  width: 100%;
+  max-width: 800px; /* Adjust as needed */
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #333; // Dark background for the whole card
+}
+
+.movie-hero {
+  position: relative;
+  height: 400px; /* Adjust as needed */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: white;
+
+  .overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+
+  .movie-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .movie-description {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-height: 90px; // Limit height for description
+  overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; // Limit to 5 lines
+  -webkit-box-orient: vertical;
+  }
+
+  .trailer-button {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .play-icon {
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 12px solid white;
+      margin-right: 10px;
+    }
+
+    span {
+      font-size: 1.1em;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .trailer-time {
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  }
+}
+
+.movie-review {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  .star-rating {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+
+    .star {
+      font-size: 1.5em;
+      color: #555; /* Unfilled star color */
+      margin-right: 2px;
+
+      &.filled {
+        color: #FFD700; /* Gold color for filled stars */
+      }
+    }
+
+    span {
+      margin-left: 5px;
+      font-weight: bold;
+    }
+  }
+
+  .review-text {
+    font-size: 0.9em;
+    line-height: 1.6;
+    max-height: 150px; // Limit height for review text
+  overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7; // Limit to 7 lines
+  -webkit-box-orient: vertical;
+  }
+}

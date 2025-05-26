@@ -1,0 +1,32 @@
+<!-- src/app/app.component.html -->
+<div class="profile">
+  <img src="path/to/profile.jpg" alt="Profile" class="profile-img">
+  <div>
+    <h2>{{ user.name }}</h2>
+    <p>{{ user.email }}</p>
+  </div>
+</div>
+
+<div class="reviews">
+  <h3>Reseñas de Películas</h3>
+  <div class="carousel">
+    <button>&lt;</button>
+    <div class="items">
+      <img *ngFor="let movie of movies" [src]="movie.image" [alt]="movie.title" class="review-img">
+    </div>
+    <button>&gt;</button>
+  </div>
+  <button class="view-all">Ver todas</button>
+</div>
+
+<div class="reviews">
+  <h3>Reseñas de Series</h3>
+  <div class="carousel">
+    <button>&lt;</button>
+    <div class="items">
+      <img *ngFor="let series of series" [src]="series.image" [alt]="series.title" class="review-img">
+    </div>
+    <button>&gt;</button>
+  </div>
+  <button class="view-all">Ver todas</button>
+</div>

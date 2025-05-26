@@ -22,5 +22,12 @@ export class HeaderComponent {
     this.router.navigate(['/home']);
   }
 
+  goToProfile() {
+    this.router.navigate(['/profile']);
+  }
+
+  goToReview() {
+    this.router.navigate(['/review']);
+  }
 
 }

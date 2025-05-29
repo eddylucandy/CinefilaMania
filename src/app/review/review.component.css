@@ -8,18 +8,37 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   overflow: hidden;
-  background-color: #333; // Dark background for the whole card
+  background-color: #333; /* Dark background for the whole card */
 }
 
-.movie-hero {
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+
+.movie-zone {
   position: relative;
   height: 400px; /* Adjust as needed */
-  background-size: cover;
-  background-position: center;
+/*  background-size: cover;
+  background-position: center;*/
   display: flex;
   align-items: flex-end;
   padding: 20px;
   color: white;
+
+  .movie-image{
+    width: 800px;
+    height: 400px;
+
+    object-fit: cover;
+  }
 
   .overlay {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
@@ -44,11 +63,11 @@
     font-size: 0.9em;
     line-height: 1.5;
     margin-bottom: 20px;
-    max-height: 90px; // Limit height for description
+    max-height: 90px; /* Limit height for description */
   overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 5; // Limit to 5 lines
+    -webkit-line-clamp: 5; /* Limit to 5 lines */
   -webkit-box-orient: vertical;
   }
 
@@ -58,6 +77,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     padding: 10px 20px;
     border-radius: 50px;
+    width: 170px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
@@ -118,11 +138,11 @@
   .review-text {
     font-size: 0.9em;
     line-height: 1.6;
-    max-height: 150px; // Limit height for review text
+    max-height: 150px; /*Limit height for review text */
   overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 7; // Limit to 7 lines
+    -webkit-line-clamp: 7; /* Limit to 7 lines */
   -webkit-box-orient: vertical;
   }
 }

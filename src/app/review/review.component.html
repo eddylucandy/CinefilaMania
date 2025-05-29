@@ -1,24 +1,30 @@
 <div class="movie-card-container">
-  <div class="movie-hero" style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/minecraft-pelicula-critica-67ef8f226988c.jpg?crop=1xw:1xh;center,top&resize=1200:*');">
+  <img class="background-image" [src]="reviewItems[0].image">
+
+  <div class="movie-zone"> 
+    <img class="movie-image" [src]="reviewItems[0].image">
     <div class="overlay">
-      <h1 class="movie-title">{{ movieTitle }}</h1>
-      <p class="movie-description">{{ movieDescription }}</p>
 
       <div class="trailer-button">
         <div class="play-icon"></div>
         <span>Ver trailer</span>
-        <span class="trailer-time">{{ trailerTime }}</span>
+        <span class="trailer-time">{{ reviewItems[0].trailerTime }}</span>
       </div>
+
+      <h1 class="movie-title">{{ reviewItems[0].title }}</h1>
+      <p class="movie-description">{{ reviewItems[0].description }}</p>
+
+
     </div>
   </div>
 
   <div class="movie-review">
     <div class="star-rating">
       <ng-container *ngFor="let star of stars">
-        <span class="star" [class.filled]="star <= rating">&#9733;</span>
+        <span class="star" [class.filled]="star <= reviewItems[0].rating">&#9733;</span>
       </ng-container>
-      <span>{{ rating }}/5</span>
+      <span>{{ reviewItems[0].rating }}/5</span>
     </div>
-    <p class="review-text">{{ reviewText }}</p>
+    <p class="review-text">{{ reviewItems[0].comment }}</p>
   </div>
 </div>

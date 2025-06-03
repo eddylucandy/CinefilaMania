@@ -9,12 +9,21 @@
   width: 100px;
   height: 100px;
   margin-right: 20px;
+  border: solid 2px black;
+  border-radius: 50%;
 }
 
-.reviews {
+.reviews-movies {
+  background-color: black;
   margin: 20px 0;
   text-align: center;
 }
+
+.reviews-series{
+  margin: 20px 0;
+  text-align: center;
+}
+
 
 .carousel {
   display: flex;
@@ -31,13 +40,37 @@
   width: 150px;
   height: 150px;
   border-radius: 10px;
+  border: solid 1px white;
+
 }
 
-.view-all {
+.view-allSerires {
   margin-top: 10px;
   padding: 10px 20px;
   background-color: #000;
   color: #fff;
-  border: none;
+  border-radius: 20px;
   cursor: pointer;
 }
+
+
+.view-allPelis {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.review-img{
+  width: 450px;
+  height: 450px;
+
+  margin: 20px;
+
+}
+
+/*
+.item {
+  margin-right: 20px; /* Control específico por elemento */

@@ -1,25 +1,38 @@
 <!-- src/app/app.component.html -->
+<br>
+<br>
+<br>
 <div class="profile">
-  <img src="path/to/profile.jpg" alt="Profile" class="profile-img">
+  <img [src]="user.img" alt="Profile" class="profile-img">
   <div>
     <h2>{{ user.name }}</h2>
     <p>{{ user.email }}</p>
   </div>
 </div>
 
-<div class="reviews">
-  <h3>Reseñas de Películas</h3>
+<br>
+<br>
+
+<div class="reviews-movies">
+  <br>
+  <br>
+  <h3 style="color: white">Reseñas de Películas</h3>
   <div class="carousel">
-    <button>&lt;</button>
-    <div class="items">
-      <img *ngFor="let movie of movies" [src]="movie.image" [alt]="movie.title" class="review-img">
+    <button (click)="prevMovie()" class="nav-button">&lt;</button>
+    <div class="items" *ngFor="let movie of visibleMovies">
+      <img [src]="movie.image" [alt]="movie.title" class="review-img">
     </div>
-    <button>&gt;</button>
+    <button (click)="nextMovie()" class="nav-button">&gt;</button>
   </div>
-  <button class="view-all">Ver todas</button>
+  <button class="view-allPelis">Ver todas</button>
+  <br>
+  <br>
 </div>
 
-<div class="reviews">
+<br>
+<br>
+
+<div class="reviews-series">
   <h3>Reseñas de Series</h3>
   <div class="carousel">
     <button>&lt;</button>
@@ -28,5 +41,7 @@
     </div>
     <button>&gt;</button>
   </div>
-  <button class="view-all">Ver todas</button>
+  <button class="view-allSerires">Ver todas</button>
 </div>
+<br>
+<br>

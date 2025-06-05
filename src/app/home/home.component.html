@@ -8,7 +8,7 @@
          <img [src]="newsItems[currentNewsIndex].image" />
          <h1>{{ newsItems[currentNewsIndex].title }}</h1>
          <p>{{ newsItems[currentNewsIndex].description }}</p>
-         <button>Entrar</button>
+         <button (click)="goToReview()">Entrar</button>
        </div>
      </div>
 
@@ -42,7 +42,7 @@
          <div class="movie-item">
            <div class="title-button">
              <h3>1st- {{ topPeliculas[0].title }}</h3>
-             <button>Ver</button>
+             <button (click)="goToReview()">Ver</button>
            </div>
            <p>{{ topPeliculas[0].description }}</p>
          </div>
@@ -50,7 +50,7 @@
          <div class="movie-item">
            <div class="title-button">
              <h3>2nd- {{ topPeliculas[1].title }}</h3>
-             <button>Ver</button>
+             <button (click)="goToReview()">Ver</button>
            </div>
            <p>{{ topPeliculas[1].description }}</p>
          </div>
@@ -58,7 +58,7 @@
          <div class="movie-item">
            <div class="title-button">
              <h3>3rd- {{ topPeliculas[2].title }}</h3>
-             <button>Ver</button>
+             <button (click)="goToReview()">Ver</button>
            </div>
            <p>{{ topPeliculas[2].description }}</p>
          </div>
@@ -84,7 +84,7 @@
          <div class="series-item">
            <div class="title-button">
              <h3>1st- {{ topSeries[0].title }}</h3>
-             <button>Ver</button>
+             <button (click)="goToReview()">Ver</button>
            </div>
            <p>{{ topSeries[0].description }}</p>
          </div>
@@ -92,7 +92,7 @@
          <div class="series-item">
            <div class="title-button">
              <h3>2nd- {{ topSeries[1].title }}</h3>
-             <button>Ver</button>
+             <button (click)="goToReview()">Ver</button>
            </div>
            <p>{{ topSeries[1].description }}</p>
          </div>
@@ -100,7 +100,7 @@
          <div class="series-item">
            <div class="title-button">
              <h3>3rd- {{ topSeries[2].title }}</h3>
-             <button>Ver</button>
+             <button (click)="goToReview()">Ver</button>
            </div>
            <p>{{ topSeries[2].description }}</p>
          </div>

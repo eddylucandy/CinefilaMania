@@ -35,11 +35,11 @@
 <div class="reviews-series">
   <h3>Reseñas de Series</h3>
   <div class="carousel">
-    <button>&lt;</button>
-    <div class="items">
-      <img *ngFor="let series of series" [src]="series.image" [alt]="series.title" class="review-img">
+    <button (click)="prevSerie()" class="nav-button">&lt;</button>
+    <div class="items" *ngFor="let serie of visibleSeries">
+      <img [src]="serie.image" [alt]="serie.title" class="review-img">
     </div>
-    <button>&gt;</button>
+    <button (click)="nextSerie()" class="nav-button">&gt;</button>
   </div>
   <button class="view-allSerires">Ver todas</button>
 </div>

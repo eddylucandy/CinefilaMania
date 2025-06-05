@@ -26,8 +26,5 @@ export class HeaderComponent {
     this.router.navigate(['/profile']);
   }
 
-  goToReview() {
-    this.router.navigate(['/review']);
-  }
 
 }

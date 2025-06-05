@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
   newsItems = [
     { title: 'Novedades del Año', description: 'Exceptional efficient emerging, minimum viable content curated...', image: 'https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg' },
     { title: 'Item 2', description: 'Gimza conversation exquisite perfect, nostalgic intricate content...', image: 'https://preview.redd.it/xe2175thl6u81.jpg?auto=webp&s=5842f2df12adb095e635f43e809d2f38093e7a13' },
@@ -35,7 +37,7 @@ export class HomeComponent implements OnInit {
 
   currentNewsIndex = 0;
 
-  constructor() { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void { }
 
@@ -46,4 +48,9 @@ export class HomeComponent implements OnInit {
   prevNews(): void {
     this.currentNewsIndex = (this.currentNewsIndex - 1 + this.newsItems.length) % this.newsItems.length;
   }
+
+  goToReview() {
+    this.router.navigate(['/review']);
+  }
+
 }

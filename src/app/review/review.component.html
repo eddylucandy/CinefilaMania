@@ -1,11 +1,11 @@
 <div class="movie-card-container">
   <img class="background-image" [src]="reviewItems[0].image">
 
-  <div class="movie-zone"> 
+  <div class="movie-zone">
     <img class="movie-image" [src]="reviewItems[0].image">
     <div class="overlay">
 
-      <div class="trailer-button">
+      <div class="trailer-button" (click)="openTrailer()">
         <div class="play-icon"></div>
         <span>Ver trailer</span>
         <span class="trailer-time">{{ reviewItems[0].trailerTime }}</span>
@@ -14,17 +14,73 @@
       <h1 class="movie-title">{{ reviewItems[0].title }}</h1>
       <p class="movie-description">{{ reviewItems[0].description }}</p>
 
-
     </div>
   </div>
 
   <div class="movie-review">
-    <div class="star-rating">
-      <ng-container *ngFor="let star of stars">
-        <span class="star" [class.filled]="star <= reviewItems[0].rating">&#9733;</span>
-      </ng-container>
-      <span>{{ reviewItems[0].rating }}/5</span>
+    <h2 class="comments-title">Comentarios de usuarios</h2>
+
+    <!-- Formulario para nuevo comentario -->
+    <div class="new-comment-form">
+      <h3 class="form-title">Deja tu comentario</h3>
+
+      <div class="rating-input">
+        <label>Tu calificación:</label>
+        <div class="star-input-container">
+          <ng-container *ngFor="let star of stars">
+            <span
+              class="star-input"
+              [class.filled]="star <= newComment.rating"
+              (click)="setRating(star)"
+              (mouseenter)="hoverRating = star"
+              (mouseleave)="hoverRating = 0"
+              [class.hover]="star <= hoverRating && hoverRating > 0">
+              &#9733;
+            </span>
+          </ng-container>
+          <span class="rating-value">{{ newComment.rating }}/5</span>
+        </div>
+      </div>
+
+      <div class="comment-input">
+        <textarea
+          [(ngModel)]="newComment.text"
+          placeholder="Escribe tu opinión sobre la película..."
+          rows="4"
+          maxlength="500">
+        </textarea>
+        <div class="character-count">{{ newComment.text.length }}/500</div>
+      </div>
+
+      <button
+        class="submit-comment-btn"
+        (click)="addComment()"
+        [disabled]="!newComment.text.trim() || newComment.rating === 0">
+        Publicar comentario
+      </button>
     </div>
-    <p class="review-text">{{ reviewItems[0].comment }}</p>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="comments-container">
+      <div class="comment-card" *ngFor="let comment of comments">
+        <div class="comment-header">
+          <img class="user-avatar" [src]="comment.avatar" [alt]="comment.username">
+          <div class="user-info">
+            <h3 class="username">{{ comment.username }}</h3>
+            <div class="star-rating">
+              <ng-container *ngFor="let star of stars">
+                <span class="star" [class.filled]="star <= comment.rating">&#9733;</span>
+              </ng-container>
+              <span class="rating-text">{{ comment.rating }}/5</span>
+            </div>
+          </div>
+          <span class="comment-date">{{ comment.date }}</span>
+        </div>
+        <p class="comment-text">{{ comment.text }}</p>
+      </div>
+    </div>
   </div>
 </div>

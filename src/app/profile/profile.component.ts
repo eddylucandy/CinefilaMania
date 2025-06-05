@@ -30,31 +30,64 @@ export class ProfileComponent {
     },
     {
       title: 'Movie 4',
-      image: 'https://www.fiestadelcine.com/wp-content/uploads/2024/10/minecraft.jpg'
+      image: 'https://all.web.img.acsta.net/r_2500_x/img/b3/fe/b3fe21d49a9a0e24d043742b55b50def.jpg'
     }
   ];
 
   series = [
-    {title: 'Series 1', image: 'path/to/series1.jpg'},
-    {title: 'Series 2', image: 'path/to/series2.jpg'},
-    {title: 'Series 3', image: 'path/to/series3.jpg'}
+    {
+      title: 'Series 1',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqzATvdFkoSEXaVE08eusKWh1yo9HY8JnAbg&s'
+    },
+    {
+      title: 'Series 2',
+      image: 'https://universalextras.co.uk/files/2023/05/Silo-2023-TV-Series-Poster-Uni-versal-Extras.png'
+    },
+    {
+      title: 'Series 3',
+      image: 'https://images.justwatch.com/poster/302745653/s332/los-ultimos-de-nosotros'
+    },
+    {
+      title: 'Series 4',
+      image: 'https://ntvb.tmsimg.com/assets/p23622757_b_h8_ai.jpg?w=960&h=540'
+    }
   ];
 
-  startIndex = 0;
+  startIndexMovie = 0;
 
+  startIndexSerie = 0;
+
+  //carousel movies
   get visibleMovies() {
-    return this.movies.slice(this.startIndex, this.startIndex + 3);
+    return this.movies.slice(this.startIndexMovie, this.startIndexMovie + 3);
   }
 
   prevMovie() {
-    if (this.startIndex > 0) {
-      this.startIndex--;
+    if (this.startIndexMovie > 0) {
+      this.startIndexMovie--;
     }
   }
 
   nextMovie() {
-    if (this.startIndex + 3 < this.movies.length) {
-      this.startIndex++;
+    if (this.startIndexMovie + 3 < this.movies.length) {
+      this.startIndexMovie++;
+    }
+  }
+
+  //carousel Series
+  get visibleSeries() {
+    return this.series.slice(this.startIndexSerie, this.startIndexSerie + 3);
+  }
+
+  prevSerie() {
+    if (this.startIndexSerie > 0) {
+      this.startIndexSerie--;
+    }
+  }
+
+  nextSerie() {
+    if (this.startIndexSerie + 3 < this.series.length) {
+      this.startIndexSerie++;
     }
   }
 }

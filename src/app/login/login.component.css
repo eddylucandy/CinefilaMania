@@ -2,13 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* opcional: altura completa de la ventana */
+  height: 100vh;
   text-align: center;
 }
 
 body {
-  margin: 0; /* Quita los márgenes */
-  height: 100vh; /* Asegura que el cuerpo ocupe toda la ventana */
+  margin: 0;
+  height: 100vh;
 }
 
 .background-image {
@@ -22,11 +22,309 @@ body {
   filter: blur(8px);
 }
 
+.movie-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
 
+.movie-zone {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.movie-image {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  border-radius: 0 0 15px 15px;
+}
+
+.trailer-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.trailer-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-left: 15px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.movie-title {
+  color: white;
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.movie-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.movie-review {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.comments-title {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Formulario de nuevo comentario */
+.new-comment-form {
+  background: #f0f0f0;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 2px dashed #ddd;
+}
+
+.form-title {
+  color: #333;
+  font-size: 20px;
+  margin: 0 0 20px 0;
+}
+
+.rating-input {
+  margin-bottom: 20px;
+}
+
+.rating-input label {
+  color: #666;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.star-input-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.star-input {
+  font-size: 30px;
+  color: #ddd;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.star-input.filled {
+  color: #ffc107;
+}
+
+.star-input.hover {
+  color: #ffdb4d;
+  transform: scale(1.1);
+}
+
+.rating-value {
+  color: #666;
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+.comment-input {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.comment-input textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+  background: white;
+  color: #333;
+}
+
+.comment-input textarea:focus {
+  outline: none;
+  border-color: #4ECDC4;
+}
+
+.comment-input textarea::placeholder {
+  color: #999;
+}
+
+.character-count {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  color: #999;
+  font-size: 12px;
+}
+
+.submit-comment-btn {
+  background: #4ECDC4;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+
+.submit-comment-btn:hover:not(:disabled) {
+  background: #45b8b0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+
+.submit-comment-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.comments-container {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Estilo del scrollbar */
+.comments-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.comments-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.comments-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.comments-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.comment-card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.comment-card:hover {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.username {
+  color: #333;
+  font-size: 18px;
+  margin: 0 0 5px 0;
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.star {
+  font-size: 16px;
+  color: #ddd;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.rating-text {
+  color: #666;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.comment-date {
+  color: #999;
+  font-size: 14px;
+}
+
+.comment-text {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Mantener estilos anteriores del login */
 .loginArea{
-  display: flex; /* Habilita Flexbox para centrar contenido interno */
-  justify-content: center; /* Centra horizontalmente el contenido interno */
-  align-items: center; /* Centra verticalmente el contenido interno */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 200px;
 }
 
@@ -35,10 +333,10 @@ body {
   width: 100px;
   border-radius: 50px;
   border: white solid 5px;
-  display: flex; /* Habilita el uso de Flexbox */
-  justify-content: center; /* Centra horizontalmente el contenido del logo */
-  align-items: center; /* Centra verticalmente el contenido del logo */
-  margin: 0 auto; /* Centra el logo horizontalmente en su contenedor */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   background-color: white;
   position: relative;
   bottom: 55px;
@@ -48,19 +346,14 @@ body {
   height: 85px;
   width: 85px;
   border-radius: 20px;
-
-
-
 }
-
 
 .login{
   border: solid white 1px;
   border-radius: 30px;
-  background-color: rgba(0, 0, 0, 0.8); /* Color negro con 50% de transparencia */
+  background-color: rgba(0, 0, 0, 0.8);
   height: 800px;
   width: 800px;
-
 }
 
 h1{
@@ -69,40 +362,34 @@ h1{
   bottom: 55px;
 }
 
-
 .form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;/*
-  gap: 10px;
-  width: 250px;*/
+  align-items: center;
 }
 
-
-
 input {
-  width: 300px; /* Ancho del input */
-  height: 40px; /* Altura del input */
-  padding: 5px; /* Espaciado interno */
-  font-size: 16px; /* Tamaño del texto */
-  border: none; /* Elimina todos los bordes */
-  border-bottom: 2px solid white; /* Agrega solo el borde inferior */
-  background-color: transparent; /* Fondo transparente */
-  color: white; /* Color del texto */
-  outline: none; /* Elimina el borde azul al hacer clic */
+  width: 300px;
+  height: 40px;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid white;
+  background-color: transparent;
+  color: white;
+  outline: none;
   margin-top: 10px;
 }
 
 input::placeholder {
-  color: rgba(255, 255, 255, 0.5); /* Color del texto del placeholder con opacidad */
+  color: rgba(255, 255, 255, 0.5);
 }
 
-
 button {
-  width: 150px; /* Ancho del input */
-  height: 60px; /* Altura del input */
-  font-size: 20px; /* Tamaño de la fuente para el texto dentro del input */
+  width: 150px;
+  height: 60px;
+  font-size: 20px;
   border-radius: 19px;
   margin-top: 1px;
   margin-bottom: 50px;
@@ -127,4 +414,3 @@ span{
   left: 30px;
   bottom: 53px;
 }
-

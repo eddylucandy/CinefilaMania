@@ -53,4 +53,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/review']);
   }
 
+  goToLista(){
+    this.router.navigate(['/lista']);
+  }
+
 }

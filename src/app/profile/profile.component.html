@@ -20,11 +20,11 @@
   <div class="carousel">
     <button (click)="prevMovie()" class="nav-button">&lt;</button>
     <div class="items" *ngFor="let movie of visibleMovies">
-      <img [src]="movie.image" [alt]="movie.title" class="review-img">
+      <img [src]="movie.image" [alt]="movie.title" class="review-img" (click)="goToReview()">
     </div>
     <button (click)="nextMovie()" class="nav-button">&gt;</button>
   </div>
-  <button class="view-allPelis">Ver todas</button>
+  <button class="view-allPelis" (click)="goToLista()">Ver todas</button>
   <br>
   <br>
 </div>
@@ -37,11 +37,11 @@
   <div class="carousel">
     <button (click)="prevSerie()" class="nav-button">&lt;</button>
     <div class="items" *ngFor="let serie of visibleSeries">
-      <img [src]="serie.image" [alt]="serie.title" class="review-img">
+      <img [src]="serie.image" [alt]="serie.title" class="review-img" (click)="goToReview()">
     </div>
     <button (click)="nextSerie()" class="nav-button">&gt;</button>
   </div>
-  <button class="view-allSerires">Ver todas</button>
+  <button class="view-allSerires" (click)="goToLista()">Ver todas</button>
 </div>
 <br>
 <br>

@@ -1,0 +1,21 @@
+<div class="listArea">
+  <img class="background-image" [src]="backgroundImageUrl" alt="Fondo de la lista">
+
+  <div class="list">
+    <section class="top-movies-section">
+      <h2>Top Películas</h2>
+      <div class="top-movies-content">
+        <div class="text-content">
+          <div class="movie-item" *ngFor="let movie of topMovies; let i = index">
+            <div class="title-button">
+              <h3>{{ i + 1 }}º - {{ movie.title }}</h3>
+              <button (click)="goToReview()">Ver</button>
+              <!-- <button (click)="goToReview(movie.title)">Ver</button> -->
+            </div>
+            <p>{{ movie.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

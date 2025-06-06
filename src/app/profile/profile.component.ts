@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {CommonModule} from '@angular/common';
-import { RouterModule } from '@angular/router';
+import {Router, RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -10,6 +10,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent {
+  constructor(private router: Router) {}
+
+
   user = {
     img: 'https://images.icon-icons.com/2643/PNG/512/man_boy_people_avatar_user_person_black_skin_tone_icon_159355.png',
     name: 'Nombre_Usuario',
@@ -89,5 +92,13 @@ export class ProfileComponent {
     if (this.startIndexSerie + 3 < this.series.length) {
       this.startIndexSerie++;
     }
+  }
+
+  goToLista(){
+    this.router.navigate(['/lista']);
+  }
+
+  goToReview() {
+    this.router.navigate(['/review']);
   }
 }

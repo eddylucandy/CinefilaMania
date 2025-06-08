@@ -47,7 +47,7 @@
 .view-allSerires {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #000;
+  background-color: #555;
   color: #fff;
   border-radius: 20px;
   cursor: pointer;
@@ -57,10 +57,20 @@
 .view-allPelis {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: white;
-  color: black;
+  background-color: #555;
+  color: #fff;;
   border-radius: 20px;
   cursor: pointer;
+}
+
+.nav-button{
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+
 }
 
 .review-img{

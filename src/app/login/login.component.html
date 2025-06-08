@@ -14,22 +14,22 @@
       <input type="email" id="email" name="email" placeholder="Email" #email>
 
       <i class="fa-solid fa-lock"></i>
-      <input type="password" id="pass" name="pass" placeholder="Password" #password>
+      <input type="password" id="pass" name="pass" placeholder="Contraseña" #password>
 
       <div class="recordar-container">
         <div class="recordar-input">
           <input type="checkbox">
         </div>
         <div class="recordar-text">
-          <p>Remember me</p>
+          <p>Recordarme</p>
         </div>
       </div>
 
-      <button (click)="login(email.value, password.value)">Login</button>
+      <button (click)="login(email.value, password.value)">Acceder</button>
     </form>
 
-    <p id="recuperacion"><u>Forgot Password?</u></p>
-    <p>Don't have an account? <span id="registro" (click)="goToRegister()">Register</span></p>
+    <p id="recuperacion"><u>Ha olvidado su contraseña?</u></p>
+    <p>Aun no tiene una cuenta? <span id="registro" (click)="goToRegister()">Crear una cuenta</span></p>
   </div>
 </div>
 

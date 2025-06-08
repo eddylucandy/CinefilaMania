@@ -1,9 +1,13 @@
+<!-- Header -->
+<app-header></app-header>
+
+<!-- List Page Content -->
 <div class="listArea">
   <img class="background-image" [src]="backgroundImageUrl" alt="Fondo de la lista">
 
   <div class="list">
     <section class="top-movies-section">
-      <h2>Top Películas</h2>
+      <h2>{{ listName }}</h2>
       <div class="top-movies-content">
         <div class="text-content">
           <div class="movie-item" *ngFor="let movie of topMovies; let i = index">
@@ -19,3 +23,6 @@
     </section>
   </div>
 </div>
+
+<!-- Footer -->
+<app-footer></app-footer>

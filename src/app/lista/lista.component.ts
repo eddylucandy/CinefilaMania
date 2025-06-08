@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import {HeaderComponent} from '../header/header.component';
+import {FooterComponent} from '../footer/footer.component';
 
 // Definimos una interfaz para asegurar el tipado de los objetos de películas
 interface Movie {
@@ -19,7 +21,7 @@ interface ListConfig {
 @Component({
   selector: 'app-lista',
   standalone: true,
-  imports: [CommonModule], // CommonModule es necesario para *ngFor
+  imports: [CommonModule, HeaderComponent, FooterComponent], // CommonModule es necesario para *ngFor
   templateUrl: './lista.component.html',
   styleUrl: './lista.component.css'
 })
@@ -34,15 +36,22 @@ export class ListaComponent implements OnInit {
     { tipoLista: 'Lista Elegida', imgList: 'https://dnm.nflximg.net/api/v6/2DuQlx0fM4wd1nzqm5BFBi6ILa8/AAAAQRC29H19twWKcTZ9Zpg4biJbGNaHF2GGIYNcLt4eZ6fvwugUJbuKxTjjMFPCS-y5P3ZePL57rupDtSkyUIJhv3P8leMJGMzszuG2CHNd65NwWPu5LeKxQkRNfNMHmxAwt7tmQZFk1VIrBd1aXr2AR5DM.jpg?r=5b1' },
     { title: 'El Padrino', Valuation: 'excelente', description: 'Un clásico del cine que narra la historia de la familia Corleone.', image: 'https://wallpapers.com/images/featured/movie-9pvmdtvz4cb0xl37.jpg' },
     { title: 'Cadena Perpetua', Valuation: 'increíble', description: 'La historia de Andy Dufresne en la prisión de Shawshank.', image: 'https://preview.redd.it/xe2175thl6u81.jpg?auto=webp&s=5842f2df12adb095e635f43e809d2f38093e7a13' },
-    { title: 'Pulp Fiction', Valuation: 'culto', description: 'Varias historias entrelazadas en el bajo mundo de Los Ángeles.', image: 'https://cloudfront-us-east-1.images.arcpublishing.com/infobae/2NJO3FE7QBHQJD5GKNCI6XIODM.jpg' }
+    { title: 'Minecraft', Valuation: 'culto', description: 'Varias historias entrelazadas en el bajo mundo de Los Ángeles.', image: 'https://cloudfront-us-east-1.images.arcpublishing.com/infobae/2NJO3FE7QBHQJD5GKNCI6XIODM.jpg' }
   ];
 
   constructor(private router: Router) {}
 
+  listName: string = ''; // Nueva propiedad para el nombre de la lista
+
   ngOnInit(): void {
     // Asignamos la URL de la imagen de fondo del primer elemento
-    if (this.rawListData.length > 0 && 'imgList' in this.rawListData[0]) {
-      this.backgroundImageUrl = (this.rawListData[0] as ListConfig).imgList;
+    //if (this.rawListData.length > 0 && 'imgList' in this.rawListData[0]) {
+    //  this.backgroundImageUrl = (this.rawListData[0] as ListConfig).imgList;
+    //}
+    if (this.rawListData.length > 0 && 'tipoLista' in this.rawListData[0]) {
+      const listConfig = this.rawListData[0] as ListConfig;
+      this.backgroundImageUrl = listConfig.imgList;
+      this.listName = listConfig.tipoLista; // Almacenar el nombre
     }
 
     // Filtramos las películas, excluyendo el primer elemento que es de configuración

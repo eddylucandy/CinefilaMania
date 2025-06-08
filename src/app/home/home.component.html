@@ -1,14 +1,16 @@
- <!-- Home Page Content -->
+<!-- Header -->
+<app-header></app-header>
+
+<!-- Home Page Content -->
  <div class="home-container">
    <!-- Novedades del Año Section -->
    <section class="news-section">
 
      <div class="carousel">
        <div class="carousel-item">
-         <img [src]="newsItems[currentNewsIndex].image" />
+         <img [src]="newsItems[currentNewsIndex].image" (click)="goToReview()"/>
          <h1>{{ newsItems[currentNewsIndex].title }}</h1>
          <p>{{ newsItems[currentNewsIndex].description }}</p>
-         <button (click)="goToReview()">Entrar</button>
        </div>
      </div>
 
@@ -41,7 +43,7 @@
        <div class="text-content">
          <div class="movie-item">
            <div class="title-button">
-             <h3>1st- {{ topPeliculas[0].title }}</h3>
+             <h3>1ª- {{ topPeliculas[0].title }}</h3>
              <button (click)="goToReview()">Ver</button>
            </div>
            <p>{{ topPeliculas[0].description }}</p>
@@ -49,7 +51,7 @@
 
          <div class="movie-item">
            <div class="title-button">
-             <h3>2nd- {{ topPeliculas[1].title }}</h3>
+             <h3>2ª- {{ topPeliculas[1].title }}</h3>
              <button (click)="goToReview()">Ver</button>
            </div>
            <p>{{ topPeliculas[1].description }}</p>
@@ -57,7 +59,7 @@
 
          <div class="movie-item">
            <div class="title-button">
-             <h3>3rd- {{ topPeliculas[2].title }}</h3>
+             <h3>3ª- {{ topPeliculas[2].title }}</h3>
              <button (click)="goToReview()">Ver</button>
            </div>
            <p>{{ topPeliculas[2].description }}</p>
@@ -83,7 +85,7 @@
        <div class="text-content">
          <div class="series-item">
            <div class="title-button">
-             <h3>1st- {{ topSeries[0].title }}</h3>
+             <h3>1ª- {{ topSeries[0].title }}</h3>
              <button (click)="goToReview()">Ver</button>
            </div>
            <p>{{ topSeries[0].description }}</p>
@@ -91,7 +93,7 @@
 
          <div class="series-item">
            <div class="title-button">
-             <h3>2nd- {{ topSeries[1].title }}</h3>
+             <h3>2ª- {{ topSeries[1].title }}</h3>
              <button (click)="goToReview()">Ver</button>
            </div>
            <p>{{ topSeries[1].description }}</p>
@@ -99,7 +101,7 @@
 
          <div class="series-item">
            <div class="title-button">
-             <h3>3rd- {{ topSeries[2].title }}</h3>
+             <h3>3ª- {{ topSeries[2].title }}</h3>
              <button (click)="goToReview()">Ver</button>
            </div>
            <p>{{ topSeries[2].description }}</p>
@@ -116,3 +118,6 @@
      </div>
    </section>
  </div>
+
+<!-- Footer -->
+<app-footer></app-footer>

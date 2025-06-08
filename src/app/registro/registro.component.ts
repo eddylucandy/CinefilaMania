@@ -28,27 +28,27 @@ export class RegistroComponent {
   // Maneja el envío del formulario
   onRegister(): void {
     if (!this.userId || !this.email || !this.password || !this.confirmPassword) {
-      alert('Please fill in all fields.');
+      alert('Por favor, rellene todos los campos.');
       return;
     }
 
     if (this.password !== this.confirmPassword) {
-      alert('Passwords do not match.');
+      alert('Las contraseñas no coinciden.');
       return;
     }
 
     if (!this.acceptedTerms) {
-      alert('You must agree to the terms and conditions.');
+      alert('Debe aceptar los términos y condiciones.');
       return;
     }
-
-    // Aquí podrías hacer una petición a Firebase o a tu backend
-    console.log('Registration successful:', {
+/*
+    // Petición a Firebase/o backend
+    console.log('Registro exitoso:', {
       userId: this.userId,
       email: this.email,
-    });
+    })*/;
 
-    alert('Registration successful!');
+    alert('Registro exitoso!');
     this.router.navigate(['/home']);
   }
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -25,6 +26,4 @@ export class HeaderComponent {
   goToProfile() {
     this.router.navigate(['/profile']);
   }
-
-
 }

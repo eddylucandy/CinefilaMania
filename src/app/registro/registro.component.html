@@ -7,33 +7,33 @@
         <img class="RegistrationLogo" src="img/logo.jpg">
       </div>
 
-      <h1 style="color: white;">Registration</h1>
+      <h1 style="color: white;">Registro</h1>
 
       <form class="form" (ngSubmit)="onRegister()">
         <i class="fa-regular fa-envelope"></i>
-        <input type="text" name="id" [(ngModel)]="userId" placeholder="User ID" />
+        <input type="text" name="id" [(ngModel)]="userId" placeholder="Usuario" />
 
         <i class="fa-regular fa-envelope"></i>
         <input type="text" name="email" [(ngModel)]="email" placeholder="Email" />
 
         <i class="fa-solid fa-lock"></i>
-        <input type="password" name="pass" [(ngModel)]="password" placeholder="Password" />
+        <input type="password" name="pass" [(ngModel)]="password" placeholder="Contraseña" />
 
         <i class="fa-solid fa-lock"></i>
-        <input type="password" name="confirm" [(ngModel)]="confirmPassword" placeholder="Confirm Password" />
+        <input type="password" name="confirm" [(ngModel)]="confirmPassword" placeholder="Confirmar Contraseña" />
 
         <div class="aceptar container">
           <label class="aceptar-label">
             <input type="checkbox" [(ngModel)]="acceptedTerms" name="terms" />
-            <span class="terms"><u>I agree to the terms & conditions</u></span>
+            <span class="terms"><u>Confirmar terminos y condiciones de uso</u></span>
           </label>
         </div>
 
         <br />
-        <button type="submit">Registration</button>
+        <button type="submit">Registro</button>
       </form>
 
-      <p>Already have an account? <span id="login" (click)="goToLogin()">Login</span></p>
+      <p>Ya tengo una cuenta? <span id="login" (click)="goToLogin()">Login</span></p>
     </div>
 </div>
 

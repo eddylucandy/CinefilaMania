@@ -80,7 +80,7 @@
 }
 
 .movie-item button {
-  background-color: #e50914; /* Color rojo vibrante, similar a Netflix */
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
@@ -91,7 +91,7 @@
 }
 
 .movie-item button:hover {
-  background-color: #ff2a34; /* Tono más claro al pasar el ratón */
+  background-color: #007bff; /* Tono más claro al pasar el ratón */
 }
 
 /* Estilos no utilizados o que pueden ser eliminados si no se usan */

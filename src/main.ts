@@ -16,7 +16,7 @@ const routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'review', component: ReviewComponent },
   { path: 'lista', component: ListaComponent },
-  { path: '', redirectTo: 'login', pathMatch: 'full' as const }
+  { path: '', redirectTo: 'home', pathMatch: 'full' as const }
 ];
 
 bootstrapApplication(AppComponent, {
